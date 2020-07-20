@@ -1,1 +1,3 @@
+void main() {}
 
+class MyApp {}
