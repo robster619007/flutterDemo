@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+<<<<<<< HEAD
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -18,5 +19,12 @@ class MyApp extends StatelessWidget {
         ),
       ),
     );
+=======
+void main() {}
+
+class MyApp extends StatelessWidget {
+  Widget build(BuildContext context) {
+    return MaterialApp();
+>>>>>>> tester2
   }
 }
