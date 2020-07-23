@@ -10,7 +10,23 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Flutter Demo'),
         ),
-        body: Text('This is the flutter demo body'),
+        body: Column(
+          children: [
+            Text('Flutter Demo within the column'),
+            RaisedButton(
+              child: Text('Button1'),
+              onPressed: null,
+            ),
+            RaisedButton(
+              child: Text('Button2'),
+              onPressed: null,
+            ),
+            RaisedButton(
+              child: Text('Button3'),
+              onPressed: null,
+            ),
+          ],
+        ),
       ),
     );
   }
