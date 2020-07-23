@@ -10,21 +10,24 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Flutter Demo'),
         ),
-        body: Column(
+        body: Row(
           children: [
-            Text('Flutter Demo within the column'),
-            RaisedButton(
-              child: Text('Button1'),
-              onPressed: null,
+            Column(
+              children: [
+                Text('Column1'),
+                RaisedButton(child: Text('Button1'), onPressed: null),
+                RaisedButton(child: Text('Button2'), onPressed: null),
+                RaisedButton(child: Text('Button3'), onPressed: null),
+              ],
             ),
-            RaisedButton(
-              child: Text('Button2'),
-              onPressed: null,
-            ),
-            RaisedButton(
-              child: Text('Button3'),
-              onPressed: null,
-            ),
+            Column(
+              children: [
+                Text('Column2'),
+                RaisedButton(child: Text('Button1'), onPressed: null),
+                RaisedButton(child: Text('Button2'), onPressed: null),
+                RaisedButton(child: Text('Button3'), onPressed: null),
+              ],
+            )
           ],
         ),
       ),
