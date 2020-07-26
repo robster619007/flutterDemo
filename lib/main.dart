@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './questions.dart';
 
 void main() => runApp(MyApp());
 
@@ -48,20 +49,6 @@ class _MyAppState extends State<MyApp> {
                     }),
               ],
             ),
-            Column(
-              children: [
-                Text('Column2'),
-                RaisedButton(child: Text('Button1'), onPressed: buttonPressed2),
-                RaisedButton(
-                    child: Text('Button2'),
-                    onPressed: () => print('btn 2 for col 2 clicked')),
-                RaisedButton(
-                    child: Text('Button3'),
-                    onPressed: () {
-                      print('btn3 for col2 clicked');
-                    }),
-              ],
-            )
           ],
         ),
       ),
