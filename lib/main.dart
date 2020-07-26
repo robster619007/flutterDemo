@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './questions.dart';
+import './answer.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,6 +29,13 @@ class _MyAppState extends State<MyApp> {
     print(_columnIndex);
   }
 
+  void resetBtn() {
+    setState(() {
+      _columnIndex = 0;
+    });
+    print(-_columnIndex);
+  }
+
   @override
   Widget build(BuildContext context) {
     var columnName = [
@@ -44,13 +52,15 @@ class _MyAppState extends State<MyApp> {
         body: Column(
           children: [
             Question(columnName[_columnIndex]),
-            RaisedButton(child: Text('Button1'), onPressed: buttonPressed1),
-            RaisedButton(child: Text('Button2'), onPressed: buttonPressed2),
-            RaisedButton(
-                child: Text('Button3'),
-                onPressed: () {
-                  print('btn3 for col1 clicked');
-                }),
+            Answer(buttonPressed1, 'Next'),
+            Answer(buttonPressed2, 'Back'),
+            Answer(resetBtn, 'Reset'),
+            // RaisedButton(child: Text('Next'), onPressed: buttonPressed1),
+            // RaisedButton(child: Text('Back'), onPressed: buttonPressed2),
+            // RaisedButton(
+            //   child: Text('Reset'),
+            //   onPressed: resetBtn,
+            // ),
           ],
         ),
       ),
