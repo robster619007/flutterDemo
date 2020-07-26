@@ -74,8 +74,32 @@ class _MyAppState extends State<MyApp> {
                 .map((answer) {
               return Answer(buttonPressed1, answer);
             }).toList(),
-            Row(
-              children: [Answer(buttonPressed1, 'next')],
+            Container(
+              // width: double.infinity,
+              // margin: EdgeInsets.all(10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  RaisedButton(
+                    color: Colors.blueAccent[700],
+                    textColor: Colors.white,
+                    child: Text('next'),
+                    onPressed: buttonPressed1,
+                  ),
+                  RaisedButton(
+                    color: Colors.blueAccent[700],
+                    textColor: Colors.white,
+                    child: Text('back'),
+                    onPressed: buttonPressed2,
+                  ),
+                  RaisedButton(
+                    color: Colors.blueAccent[700],
+                    textColor: Colors.white,
+                    child: Text('reset'),
+                    onPressed: resetBtn,
+                  ),
+                ],
+              ),
             )
           ],
         ),
