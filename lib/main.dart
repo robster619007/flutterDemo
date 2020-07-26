@@ -2,9 +2,22 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return MyAppState();
+  }
+}
+
+class MyAppState extends State<MyApp> {
+  var columnIndex = 0;
+
   void buttonPressed1() {
-    print('Column1 pressed');
+    setState(() {
+      columnIndex = columnIndex + 1;
+    });
+
+    print(columnIndex);
   }
 
   void buttonPressed2() {
@@ -23,7 +36,7 @@ class MyApp extends StatelessWidget {
           children: [
             Column(
               children: [
-                Text(columnName.elementAt(3)),
+                Text(columnName[columnIndex]),
                 RaisedButton(child: Text('Button1'), onPressed: buttonPressed1),
                 RaisedButton(
                     child: Text('Button2'),
