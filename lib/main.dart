@@ -70,10 +70,19 @@ class _MyAppState extends State<MyApp> {
         body: Column(
           children: [
             Question(columnName[_columnIndex]['questions']),
-            Answer(buttonPressed1, 'Next'),
-            Answer(buttonPressed2, 'Back'),
-            Answer(resetBtn, 'Reset'),
+            ...(columnName[_columnIndex]['answer'] as List<String>)
+                .map((answer) {
+              return Answer(buttonPressed1, answer);
+            }).toList(),
+           
           ],
+          [ Row(
+              children: [
+                Answer(buttonPressed1, 'Next'),
+                Answer(buttonPressed2, 'Back'),
+                Answer(resetBtn, 'Reset'),
+              ],
+            ),]
         ),
       ),
     );
