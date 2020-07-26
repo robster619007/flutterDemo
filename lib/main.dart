@@ -39,11 +39,29 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     var columnName = [
-      'How do you do?',
-      'What\'s the question?',
-      'Where am I?',
-      'Who are you?'
+      {
+        'questions': 'How do you do?',
+        'answer': ['Doing well', 'Fine', 'Not good'],
+      },
+      {
+        'questions': 'What\'s the question?',
+        'answer': ['How do you do?', 'What??', 'You heard me right?'],
+      },
+      {
+        'questions': 'Where am I?',
+        'answer': ['In the office', 'Home', 'Somewhere'],
+      },
+      {
+        'questions': 'Who are you?',
+        'answer': ['Your Friend', 'You', 'Somebody'],
+      },
     ];
+    // [
+    //   'How do you do?',
+    //   'What\'s the question?',
+    //   'Where am I?',
+    //   'Who are you?'
+    // ];
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -51,16 +69,10 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Question(columnName[_columnIndex]),
+            Question(columnName[_columnIndex]['questions']),
             Answer(buttonPressed1, 'Next'),
             Answer(buttonPressed2, 'Back'),
             Answer(resetBtn, 'Reset'),
-            // RaisedButton(child: Text('Next'), onPressed: buttonPressed1),
-            // RaisedButton(child: Text('Back'), onPressed: buttonPressed2),
-            // RaisedButton(
-            //   child: Text('Reset'),
-            //   onPressed: resetBtn,
-            // ),
           ],
         ),
       ),

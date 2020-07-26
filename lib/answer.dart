@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
   final Function triggerFunc;
-  String btnName;
+  final String btnName;
 
   Answer(this.triggerFunc, this.btnName);
   @override
@@ -12,6 +12,7 @@ class Answer extends StatelessWidget {
         margin: EdgeInsets.all(10),
         child: RaisedButton(
           color: Colors.blueAccent[700],
+          textColor: Colors.white,
           child: Text(btnName),
           onPressed: triggerFunc,
         ));
