@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var columnName = ['Column 1', 'column 1', 'col1', 'COLUMN ONE'];
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           children: [
             Column(
               children: [
-                Text('Column1'),
+                Text(columnName.elementAt(3)),
                 RaisedButton(child: Text('Button1'), onPressed: buttonPressed1),
                 RaisedButton(
                     child: Text('Button2'),
