@@ -69,32 +69,10 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-<<<<<<< HEAD
-            Column(
-              children: [
-                Text('Column1'),
-                RaisedButton(child: Text('Button1'), onPressed: null),
-                RaisedButton(child: Text('Button2'), onPressed: null),
-                RaisedButton(child: Text('Button3'), onPressed: null),
-                Row(
-                  children: [Text('Eg1'), Text('Eg2')],
-                )
-              ],
-            ),
-            Column(
-              children: [
-                Text('Column2'),
-                RaisedButton(child: Text('Button1'), onPressed: null),
-                RaisedButton(child: Text('Button2'), onPressed: null),
-                RaisedButton(child: Text('Button3'), onPressed: null),
-              ],
-            )
-=======
             Question(columnName[_columnIndex]['questions']),
             Answer(buttonPressed1, 'Next'),
             Answer(buttonPressed2, 'Back'),
             Answer(resetBtn, 'Reset'),
->>>>>>> 51344e231add1470a68083541fd46a110880c9c1
           ],
         ),
       ),
