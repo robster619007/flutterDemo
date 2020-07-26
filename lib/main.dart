@@ -5,19 +5,19 @@ void main() => runApp(MyApp());
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return MyAppState();
+    return _MyAppState();
   }
 }
 
-class MyAppState extends State<MyApp> {
-  var columnIndex = 0;
+class _MyAppState extends State<MyApp> {
+  var _columnIndex = 0;
 
   void buttonPressed1() {
     setState(() {
-      columnIndex = columnIndex + 1;
+      _columnIndex = _columnIndex + 1;
     });
 
-    print(columnIndex);
+    print(_columnIndex);
   }
 
   void buttonPressed2() {
@@ -36,7 +36,7 @@ class MyAppState extends State<MyApp> {
           children: [
             Column(
               children: [
-                Text(columnName[columnIndex]),
+                Text(columnName[_columnIndex]),
                 RaisedButton(child: Text('Button1'), onPressed: buttonPressed1),
                 RaisedButton(
                     child: Text('Button2'),
