@@ -18,6 +18,9 @@ class MyApp extends StatelessWidget {
                 RaisedButton(child: Text('Button1'), onPressed: null),
                 RaisedButton(child: Text('Button2'), onPressed: null),
                 RaisedButton(child: Text('Button3'), onPressed: null),
+                Row(
+                  children: [Text('Eg1'), Text('Eg2')],
+                )
               ],
             ),
             Column(
