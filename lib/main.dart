@@ -74,6 +74,9 @@ class _MyAppState extends State<MyApp> {
                 .map((answer) {
               return Answer(buttonPressed1, answer);
             }).toList(),
+            Row(
+              children: [Answer(buttonPressed1, 'next')],
+            )
           ],
         ),
       ),
